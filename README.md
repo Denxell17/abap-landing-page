@@ -48,4 +48,4 @@ Cloudflare Pages will apply the security policy in `_headers`. The Content Secur
 - Confirm the canonical URL and sitemap remain `https://abap.dennisbasadre.com`.
 - Test keyboard navigation, the mobile menu, and reduced-motion behavior.
 - Check every public link and confirm the browser console is clean.
-- Do not add a live-application link until the application is deployed.
+- Confirm the production application link remains `https://app.dennisbasadre.com`.
