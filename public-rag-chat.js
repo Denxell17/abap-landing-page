@@ -32,6 +32,10 @@
       status.textContent = message;
     };
 
+    const revealElement = (element) => {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
     const resetChallenge = () => {
       token.value = '';
       if (widgetId !== null && window.turnstile) {
@@ -83,6 +87,7 @@
       answerText.textContent = '';
       sources.replaceChildren();
       setStatus('Checking the public knowledge base…');
+      revealElement(status);
 
       try {
         const response = await fetch(config.endpoint, {
@@ -115,8 +120,10 @@
         answerPanel.hidden = false;
         setStatus('');
         answerPanel.focus({ preventScroll: true });
+        revealElement(answerPanel);
       } catch (_error) {
         setStatus('An answer is not available right now. Please try again later.');
+        revealElement(status);
       } finally {
         submit.disabled = false;
         resetChallenge();

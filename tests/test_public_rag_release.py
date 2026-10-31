@@ -53,6 +53,7 @@ class TestPublicRagRelease(unittest.TestCase):
         self.assertIn("maximumQuestionCharacters", client)
         self.assertIn("textContent", client)
         self.assertIn("replaceChildren", client)
+        self.assertIn("scrollIntoView", client)
         self.assertNotIn("innerHTML", client)
         self.assertNotRegex(combined, r"sb_secret_[A-Za-z0-9_-]{20,}")
         self.assertNotRegex(combined, r"AIza[0-9A-Za-z_-]{20,}")
