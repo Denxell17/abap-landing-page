@@ -51,6 +51,7 @@ class TestPublicRagRelease(unittest.TestCase):
 
         self.assertIn("https://app.dennisbasadre.com/api/public/rag/chat", client)
         self.assertIn("maximumQuestionCharacters", client)
+        self.assertIn("action: 'abap_public_rag'", client)
         self.assertIn("textContent", client)
         self.assertIn("replaceChildren", client)
         self.assertIn("scrollIntoView", client)

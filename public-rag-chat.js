@@ -47,6 +47,7 @@
       if (!window.turnstile || widgetId !== null) return;
       widgetId = window.turnstile.render(turnstileContainer, {
         sitekey: config.turnstileSiteKey,
+        action: 'abap_public_rag',
         callback: (value) => {
           token.value = value;
           setStatus('');
