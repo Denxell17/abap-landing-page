@@ -23,6 +23,8 @@ The site uses document-relative asset paths, so its styling also works when `ind
 |-- index.html    # Semantic page content and metadata
 |-- styles.css    # Responsive design, states, and motion
 |-- script.js     # Mobile navigation and progressive reveal behavior
+|-- public-rag-config.js # Public assistant release configuration
+|-- public-rag-chat.js   # Turnstile-protected public assistant client
 |-- assets/       # Approved ABAP logo and application dashboard image
 |-- favicon.svg   # Local product favicon
 |-- _headers      # Cloudflare Pages response headers
@@ -40,7 +42,11 @@ This repository needs no build command.
 4. Set the **build output directory** to `/` (the repository root).
 5. Deploy, then add `abap.dennisbasadre.com` as the custom domain when DNS work is ready.
 
-Cloudflare Pages will apply the security policy in `_headers`. The Content Security Policy intentionally allows only same-origin files and does not permit third-party scripts, frames, or connections.
+Cloudflare Pages will apply the security policy in `_headers`. The policy permits the local site assets plus the explicitly scoped Cloudflare Turnstile and ABAP production API origins required by the public assistant.
+
+## Public assistant release gate
+
+`public-rag-config.js` contains the public production Turnstile site key and release flag. The Turnstile secret, Gemini key, Supabase secret, and gateway token remain server-side and must never be committed to this repository. Setting `enabled: false` hides the assistant and prevents it from making external requests.
 
 ## Pre-deployment checklist
 

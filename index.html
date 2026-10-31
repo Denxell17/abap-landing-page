@@ -21,7 +21,9 @@
     <meta name="twitter:description" content="Business automation built to be secure, observable, and recoverable.">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="public-rag-config.js"></script>
     <script src="script.js"></script>
+    <script src="public-rag-chat.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -41,6 +43,7 @@
           <a href="#capabilities">Capabilities</a>
           <a href="#security">Security</a>
           <a href="#technology">Technology</a>
+          <a href="#assistant" data-public-rag-navigation hidden>AI Assistant</a>
           <a href="#status">Status</a>
           <a href="https://github.com/Denxell17/AI-Business-Automation-Platform">Source</a>
           <a class="nav-cta" href="https://app.dennisbasadre.com">Launch Application <span aria-hidden="true">↗</span></a>
@@ -252,6 +255,47 @@
             <img class="product-screenshot" src="assets/abap-dashboard-dark.png" width="1586" height="992" loading="lazy" decoding="async" alt="ABAP application dashboard showing operational overview cards, workflow activity, schedules, agent executions, system readiness, and navigation.">
             <figcaption><span>Approved product interface</span><span>ABAP dashboard · Dark theme</span></figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="section public-rag" id="assistant" aria-labelledby="public-rag-title" data-public-rag-section hidden>
+        <div class="shell public-rag-layout">
+          <div class="section-intro reveal">
+            <p class="eyebrow">Public knowledge assistant</p>
+            <h2 id="public-rag-title">Ask a focused question about ABAP.</h2>
+            <p>The assistant searches only ABAP's reviewed public knowledge base. It does not access private application data, customer records, or internal documents.</p>
+          </div>
+
+          <div class="public-rag-panel reveal reveal-delay-1">
+            <form id="public-rag-form" data-endpoint="https://app.dennisbasadre.com/api/public/rag/chat" novalidate>
+              <div class="public-rag-field">
+                <label for="public-rag-language">Answer language</label>
+                <select id="public-rag-language" name="language">
+                  <option value="auto">Automatic</option>
+                  <option value="en">English</option>
+                  <option value="ja">日本語</option>
+                </select>
+              </div>
+
+              <div class="public-rag-field">
+                <label for="public-rag-question">Business question</label>
+                <textarea id="public-rag-question" name="question" rows="4" maxlength="500" placeholder="What is ABAP and what business problems does it solve?" required></textarea>
+                <small>Up to 500 characters. Do not include confidential or personal information.</small>
+              </div>
+
+              <div class="public-rag-turnstile" data-public-rag-turnstile aria-label="Security verification"></div>
+              <input type="hidden" name="turnstile_token" value="">
+
+              <button class="button button-primary" type="submit">Ask AI Assistant</button>
+              <p class="public-rag-status" id="public-rag-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <section class="public-rag-answer" id="public-rag-answer" aria-labelledby="public-rag-answer-title" tabindex="-1" hidden>
+              <h3 id="public-rag-answer-title">Assistant response</h3>
+              <p data-public-rag-answer></p>
+              <div class="public-rag-sources" data-public-rag-sources></div>
+            </section>
+          </div>
         </div>
       </section>
 
