@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ABAP — AI Business Automation Platform</title>
-    <meta name="description" content="ABAP is a Docker-based platform for building and operating practical business workflows from one system.">
+    <meta name="description" content="ABAP is a portfolio application for managing business records and repeatable workflows.">
     <meta name="theme-color" content="#0b1116">
     <meta name="color-scheme" content="dark">
     <meta name="robots" content="index, follow">
@@ -14,11 +14,11 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ABAP">
     <meta property="og:title" content="ABAP — AI Business Automation Platform">
-    <meta property="og:description" content="Business automation built to be secure, observable, and recoverable.">
+    <meta property="og:description" content="Manage business records and repeatable workflows in a protected portfolio application.">
     <meta property="og:url" content="https://abap.dennisbasadre.com/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="ABAP — AI Business Automation Platform">
-    <meta name="twitter:description" content="Business automation built to be secure, observable, and recoverable.">
+    <meta name="twitter:description" content="Manage business records and repeatable workflows in a protected portfolio application.">
 
     <link rel="stylesheet" href="styles.css">
     <script src="public-rag-config.js"></script>
@@ -43,6 +43,7 @@
         </button>
 
         <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-nav>
+          <a href="#product-gallery">Screenshots</a>
           <a href="#capabilities">Capabilities</a>
           <a href="#security">Security</a>
           <a href="#technology">Technology</a>
@@ -60,14 +61,14 @@
         <div class="shell hero-layout">
           <div class="hero-copy">
             <p class="eyebrow reveal">AI Business Automation Platform</p>
-            <h1 id="hero-title" class="reveal reveal-delay-1">Business automation built to be <span>secure, observable, and recoverable.</span></h1>
-            <p class="hero-summary reveal reveal-delay-2">ABAP is a Docker-based platform for building and operating practical business workflows from one system. It combines business records, scheduled automation, signed integrations, provider-independent AI services, health and readiness checks, encrypted backups, tested recovery procedures, and local AI support.</p>
+            <h1 id="hero-title" class="reveal reveal-delay-1">Business records and workflows. <span>One protected workspace.</span></h1>
+            <p class="hero-summary reveal reveal-delay-2">Manage employees, CRM leads and customers, invoices, and workflow execution history in a role-controlled application. ABAP is a production-hosted portfolio project with English and Japanese interfaces; optional integrations have separate availability boundaries.</p>
             <div class="hero-actions reveal reveal-delay-3">
               <a class="button button-primary" href="https://app.dennisbasadre.com">
                 Launch Application
                 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6M3 10h10" /></svg>
               </a>
-              <a class="button button-secondary" href="https://github.com/Denxell17/AI-Business-Automation-Platform">View source</a>
+              <a class="button button-secondary" href="#product-gallery">Explore the interface</a>
             </div>
             <ul class="hero-facts reveal reveal-delay-3" aria-label="Project facts">
               <li><span class="signal signal-complete"></span>Milestones 1–5 complete</li>
@@ -76,46 +77,12 @@
             </ul>
           </div>
 
-          <div class="blueprint reveal reveal-delay-2" aria-label="ABAP platform blueprint">
-            <div class="blueprint-topline">
-              <span>Platform blueprint</span>
-              <span class="blueprint-state"><i></i> Observable system</span>
-            </div>
-            <div class="blueprint-canvas">
-              <div class="flow-node flow-records">
-                <span class="node-index">01</span>
-                <strong>Business records</strong>
-                <small>Employees · CRM · Invoices</small>
-              </div>
-              <div class="flow-line flow-line-a" aria-hidden="true"><i></i></div>
-              <div class="flow-node flow-core">
-                <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3v4m0 14v4M3 14h4m14 0h4M6.2 6.2 9 9m10 10 2.8 2.8m0-15.6L19 9M9 19l-2.8 2.8"/><circle cx="14" cy="14" r="5"/></svg>
-                <strong>Workflow core</strong>
-                <small>Scheduled · Automated · Tested</small>
-              </div>
-              <div class="flow-line flow-line-b" aria-hidden="true"><i></i></div>
-              <div class="flow-node flow-integrations">
-                <span class="node-index">02</span>
-                <strong>Signed integrations</strong>
-                <small>Webhooks · n8n</small>
-              </div>
-              <div class="flow-node flow-ai">
-                <span class="node-index">03</span>
-                <strong>AI services</strong>
-                <small>Provider-independent · Local Qwen</small>
-              </div>
-              <div class="blueprint-rail">
-                <span><i class="rail-dot rail-dot-blue"></i>Monitoring</span>
-                <span><i class="rail-dot rail-dot-teal"></i>Encrypted backups</span>
-                <span><i class="rail-dot rail-dot-white"></i>Tested recovery</span>
-              </div>
-            </div>
-            <div class="blueprint-footer">
-              <span>PostgreSQL persistence</span>
-              <span>FastAPI</span>
-              <span>Docker Compose</span>
-            </div>
-          </div>
+          <figure class="preview-frame hero-product" aria-labelledby="hero-capture-caption">
+            <a href="assets/abap-dashboard-current-en.webp" aria-label="Open full-size English dashboard screenshot">
+              <img class="product-screenshot" src="assets/abap-dashboard-current-en.webp" width="1424" height="1105" fetchpriority="high" decoding="async" alt="Current ABAP dashboard with six synthetic employees, three departments, CRM and invoice summaries, and a running manual workflow.">
+            </a>
+            <figcaption id="hero-capture-caption">Current application · Synthetic demonstration data · November 3, 2026</figcaption>
+          </figure>
         </div>
       </section>
 
@@ -242,25 +209,35 @@
         </div>
       </section>
 
-      <section class="section product-preview" aria-labelledby="preview-title">
+      <section class="section product-preview" id="product-gallery" aria-labelledby="preview-title">
         <div class="shell">
-          <div class="section-heading preview-heading reveal">
-            <div>
-              <p class="eyebrow">Product interface</p>
-              <h2 id="preview-title">One workspace for operating business automation.</h2>
-            </div>
-            <p>The approved ABAP dashboard brings operational status, workflow activity, schedules, agent executions, and useful actions into a consistent English and Japanese interface.</p>
+          <div class="section-heading">
+            <div><p class="eyebrow">Inside the application</p><h2 id="preview-title">Real screens. Reviewable work.</h2></div>
+            <p>Captured from the current application in an isolated local environment on November 3, 2026. Every record is synthetic. Open any image to inspect it at full size.</p>
           </div>
-          <figure class="preview-frame reveal reveal-delay-1">
-            <div class="preview-bar" aria-hidden="true">
-              <span></span><span></span><span></span>
-              <div>ABAP / Application dashboard</div>
-            </div>
-            <picture>
-              <img class="product-screenshot" src="assets/abap-dashboard-dark.png" width="1586" height="992" loading="lazy" decoding="async" alt="ABAP application dashboard showing operational overview cards, workflow activity, schedules, agent executions, system readiness, and navigation.">
-            </picture>
-            <figcaption><span>Approved product interface</span><span>ABAP dashboard · Dark theme</span></figcaption>
-          </figure>
+          <div class="product-gallery">
+            <figure class="gallery-card">
+              <a class="gallery-image" href="assets/abap-crm-current-en.webp" aria-label="Open full-size crm leads screenshot"><img src="assets/abap-crm-current-en.webp" width="1440" height="1000" loading="lazy" decoding="async" alt="CRM lead directory containing three fictional contacts and example.test email addresses."></a>
+              <figcaption><h3>CRM leads</h3><p>Fictional contacts with new and converted lead stages.</p><span>Synthetic demonstration data · View full image ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="assets/abap-invoice-current-en.webp" aria-label="Open full-size customer invoices screenshot"><img src="assets/abap-invoice-current-en.webp" width="1424" height="1512" loading="lazy" decoding="async" alt="Synthetic invoice DEMO-2026-001 with line items totaling USD 900 and a protected document download."></a>
+              <figcaption><h3>Customer invoices</h3><p>Calculated line items, a sent invoice, and a protected PDF download. All amounts are synthetic.</p><span>Synthetic demonstration data · View full image ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="assets/abap-workflow-current-en.webp" aria-label="Open full-size tracked workflows screenshot"><img src="assets/abap-workflow-current-en.webp" width="1424" height="1710" loading="lazy" decoding="async" alt="Manual onboarding workflow with one task and a running execution; n8n dispatch is disabled and no schedules are configured."></a>
+              <figcaption><h3>Tracked workflows</h3><p>An active manual workflow with a started-only execution. It remains Running; no completed automation or external dispatch is shown.</p><span>Synthetic demonstration data · View full image ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="assets/abap-dashboard-current-ja.webp" aria-label="Open full-size japanese interface screenshot"><img src="assets/abap-dashboard-current-ja.webp" width="1424" height="1105" loading="lazy" decoding="async" alt="ABAP dashboard with Japanese interface labels and unchanged synthetic English business records."></a>
+              <figcaption><h3>Japanese interface</h3><p>Localized interface labels with the same synthetic records. Business data and some date formatting remain English.</p><span>Synthetic demonstration data · View full image ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="assets/abap-dashboard-mobile-en.webp" aria-label="Open full-size mobile responsiveness screenshot"><img src="assets/abap-dashboard-mobile-en.webp" width="375" height="2567" loading="lazy" decoding="async" alt="Full-page mobile ABAP dashboard with stacked summary cards and operational panels."></a>
+              <figcaption><h3>Mobile responsiveness</h3><p>The actual responsive dashboard at a 390 × 844 viewport. Full-page capture; the workflow table scrolls horizontally.</p><span>Synthetic demonstration data · View full image ↗</span></figcaption>
+            </figure>
+          </div>
+          <p class="gallery-note">These screenshots demonstrate the recorded local state, not production business data or commercial results. No AI Assistant screenshot is included because an isolated provider response has not been verified.</p>
         </div>
       </section>
 
@@ -355,7 +332,7 @@
             </picture>
             <span class="brand-copy"><span>AI Business Automation Platform</span></span>
           </a>
-          <p>Business automation built to be secure, observable, and recoverable.</p>
+          <p>Manage business records and repeatable workflows in a protected portfolio application.</p>
         </div>
         <div class="footer-links">
           <div><h2>Project</h2><a href="https://app.dennisbasadre.com">Live application <span aria-hidden="true">↗</span></a><a href="https://github.com/Denxell17/AI-Business-Automation-Platform">Source repository <span aria-hidden="true">↗</span></a></div>

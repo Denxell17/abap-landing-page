@@ -55,3 +55,11 @@ Cloudflare Pages will apply the security policy in `_headers`. The unchanged rem
 - Test keyboard navigation, the mobile menu, and reduced-motion behavior.
 - Check every public link and confirm the browser console is clean.
 - Confirm the production application link remains `https://app.dennisbasadre.com`.
+
+## Current product screenshots
+
+Six genuine captures from November 3, 2026 are stored as `assets/abap-*-current-*.webp` and `assets/abap-dashboard-mobile-en.webp`. They use synthetic records in an isolated local SQLite demonstration. The English dashboard leads the page; the gallery covers CRM, invoice details, workflows, Japanese interface labels, and mobile reflow. Images link to their full-size files.
+
+The workflow capture shows a started-only manual execution that remains Running, no configured schedules, and disabled n8n dispatch. Japanese localization does not translate business records; some date formatting remains English. No AI Assistant screenshot or verified provider response is claimed. See `SCREENSHOTS.md` for provenance and privacy results.
+
+Cloudflare settings above were verified by the owner. This candidate preserves remote RAG and Turnstile behavior; it changes no headers, scripts, release flags, keys, or endpoints. No live assistant request was made during candidate validation.
