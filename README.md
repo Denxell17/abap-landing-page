@@ -2,7 +2,9 @@
 
 The public product landing page for **ABAP — AI Business Automation Platform**.
 
-This site is intentionally built with plain HTML, CSS, and JavaScript. It has no framework, build step, package manager, external fonts, remote scripts, analytics, or runtime dependencies.
+This site is intentionally built with plain HTML, CSS, and JavaScript. The static page needs no framework, build step, package manager, external fonts, application-authored analytics, or package-manager runtime dependencies. The existing public assistant loads Cloudflare Turnstile and calls the configured ABAP API after verification.
+
+The landing page distinguishes the live production application from capabilities that are implemented and privately tested. Milestones 1–5 are complete; Milestone 6 integrations are implemented and privately tested but not production-enabled; Milestones 7–8 remain in progress even though the application and HTTPS are live. On October 8, 2026, the production Restic/Backblaze B2 backup and isolated PostgreSQL 18.6 recovery drill passed: the encrypted snapshot was verified, 22 tables were restored, application records were checked, and the disposable application passed health and readiness checks.
 
 ## Local preview
 
@@ -23,9 +25,7 @@ The site uses document-relative asset paths, so its styling also works when `ind
 |-- index.html    # Semantic page content and metadata
 |-- styles.css    # Responsive design, states, and motion
 |-- script.js     # Mobile navigation and progressive reveal behavior
-|-- public-rag-config.js # Public assistant release configuration
-|-- public-rag-chat.js   # Turnstile-protected public assistant client
-|-- assets/       # Approved ABAP logo and application dashboard image
+|-- assets/       # Approved ABAP logo and dashboard, with optimized WebP copies
 |-- favicon.svg   # Local product favicon
 |-- _headers      # Cloudflare Pages response headers
 |-- robots.txt    # Search crawler policy
@@ -34,15 +34,15 @@ The site uses document-relative asset paths, so its styling also works when `ind
 
 ## Cloudflare Pages deployment
 
-This repository needs no build command.
+The owner-verified Cloudflare configuration uses production branch `main`, automatic deployments enabled, build command `exit 0`, repository-root output, and build watch paths `*`. The site requires no compilation; any future push to production main is a deployment action.
 
 1. Create a Cloudflare Pages project from this repository.
 2. Choose the static HTML / no-framework preset.
-3. Leave the **build command** empty.
+3. Preserve the configured **build command** `exit 0`.
 4. Set the **build output directory** to `/` (the repository root).
-5. Deploy, then add `abap.dennisbasadre.com` as the custom domain when DNS work is ready.
+5. Preserve the existing `abap.dennisbasadre.com` custom domain. Deployment requires separate approval.
 
-Cloudflare Pages will apply the security policy in `_headers`. The policy permits the local site assets plus the explicitly scoped Cloudflare Turnstile and ABAP production API origins required by the public assistant.
+Cloudflare Pages will apply the security policy in `_headers`. The unchanged remote Content Security Policy permits local assets plus the scoped Cloudflare Turnstile and ABAP API origins required by the public assistant.
 
 ## Public assistant release gate
 

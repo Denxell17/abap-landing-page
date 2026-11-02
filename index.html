@@ -31,7 +31,10 @@
     <header class="site-header" data-header>
       <div class="shell header-inner">
         <a class="brand" href="#top" aria-label="ABAP home">
-          <img class="brand-logo" src="assets/abap-logo.png" width="120" height="40" alt="">
+          <picture>
+            <source srcset="assets/abap-logo.webp" type="image/webp">
+            <img class="brand-logo" src="assets/abap-logo.png" width="120" height="40" alt="">
+          </picture>
           <span class="brand-copy"><span>AI Business Automation Platform</span></span>
         </a>
 
@@ -58,7 +61,7 @@
           <div class="hero-copy">
             <p class="eyebrow reveal">AI Business Automation Platform</p>
             <h1 id="hero-title" class="reveal reveal-delay-1">Business automation built to be <span>secure, observable, and recoverable.</span></h1>
-            <p class="hero-summary reveal reveal-delay-2">ABAP is a Docker-based platform for building and operating practical business workflows from one system. It combines business records, scheduled automation, signed integrations, provider-independent AI services, operational monitoring, encrypted backups, tested recovery procedures, and local AI support.</p>
+            <p class="hero-summary reveal reveal-delay-2">ABAP is a Docker-based platform for building and operating practical business workflows from one system. It combines business records, scheduled automation, signed integrations, provider-independent AI services, health and readiness checks, encrypted backups, tested recovery procedures, and local AI support.</p>
             <div class="hero-actions reveal reveal-delay-3">
               <a class="button button-primary" href="https://app.dennisbasadre.com">
                 Launch Application
@@ -67,9 +70,9 @@
               <a class="button button-secondary" href="https://github.com/Denxell17/AI-Business-Automation-Platform">View source</a>
             </div>
             <ul class="hero-facts reveal reveal-delay-3" aria-label="Project facts">
-              <li><span class="signal signal-complete"></span>Milestones 1–8 complete</li>
+              <li><span class="signal signal-complete"></span>Milestones 1–5 complete</li>
               <li><span class="signal signal-complete"></span>Production application live with HTTPS</li>
-              <li><span class="signal signal-neutral"></span>Docker-based</li>
+              <li><span class="signal signal-complete"></span>Recovery drill verified October 8</li>
             </ul>
           </div>
 
@@ -158,7 +161,7 @@
               <div class="card-number">02</div>
               <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4v5m0 0h5M6 9l4-4m8 15v-5m0 0h-5m5 0-4 4M5 14a7 7 0 0 0 12 3M19 10A7 7 0 0 0 7 7"/></svg></div>
               <h3>Workflow engine</h3>
-              <p>Scheduled execution and background processing for repeatable work.</p>
+              <p>Production-enabled scheduling and background processing, with private n8n automation support.</p>
               <ul>
                 <li>Scheduled workflows</li>
                 <li>Background workers</li>
@@ -170,7 +173,7 @@
               <div class="card-number">03</div>
               <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12a4 4 0 0 1 4-4h3m1-3 3 3-3 3M16 12a4 4 0 0 1-4 4H9m-1 3-3-3 3-3"/></svg></div>
               <h3>Integrations &amp; AI</h3>
-              <p>Signed connections and AI services that are not tied to one provider.</p>
+              <p>Implemented and privately tested signed connections and provider-independent AI services; these protected-workflow integrations have separate production gates. The public knowledge assistant below is a separate integration.</p>
               <ul>
                 <li>Signed webhook integrations</li>
                 <li>Provider-independent AI services</li>
@@ -182,11 +185,12 @@
               <div class="card-number">04</div>
               <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 4.7 3.2 7.7 8 9 4.8-1.3 8-4.3 8-9V7zM8 12l2.5 2.5L16 9"/></svg></div>
               <h3>Operations &amp; recovery</h3>
-              <p>Persistence, visibility, backups, and procedures for when things go wrong.</p>
+              <p>Production persistence, health checks, encrypted backups, and tested recovery procedures.</p>
               <ul>
                 <li>PostgreSQL persistence</li>
-                <li>Health monitoring</li>
-                <li>Encrypted backups and restore drills</li>
+                <li>Health and readiness checks</li>
+                <li>Encrypted Restic/B2 backups</li>
+                <li>Isolated restore drills</li>
                 <li>Rollback procedures and automated testing</li>
               </ul>
             </article>
@@ -210,8 +214,8 @@
             <li><span>01</span><div><strong>Secrets stay outside source control</strong><p>Secrets are kept separate from the codebase.</p></div></li>
             <li><span>02</span><div><strong>Signed external webhook requests</strong><p>External webhook integrations use HMAC signatures.</p></div></li>
             <li><span>03</span><div><strong>Least-privilege deployment design</strong><p>Deployment follows a least-privilege principle.</p></div></li>
-            <li><span>04</span><div><strong>Encrypted backups</strong><p>PostgreSQL backups are encrypted.</p></div></li>
-            <li><span>05</span><div><strong>Documented recovery</strong><p>Restore and rollback procedures are documented and restore drills are part of the platform.</p></div></li>
+            <li><span>04</span><div><strong>Encrypted backups</strong><p>Production PostgreSQL backups are encrypted with Restic and stored in private Backblaze B2 storage.</p></div></li>
+            <li><span>05</span><div><strong>Documented and tested recovery</strong><p>On October 8, 2026, an isolated recovery drill restored 22 PostgreSQL tables, verified application records, and passed health and readiness checks.</p></div></li>
             <li><span>06</span><div><strong>Separated public and local systems</strong><p>Local AI stays outside the public cloud deployment, while the public landing page remains available independently of the application server.</p></div></li>
           </ol>
         </div>
@@ -229,7 +233,7 @@
             <li><span>API</span><strong>FastAPI</strong></li>
             <li><span>Data</span><strong>PostgreSQL</strong></li>
             <li><span>Runtime</span><strong>Docker Compose</strong></li>
-            <li><span>Interface</span><strong>HTML · CSS · JavaScript</strong></li>
+            <li><span>Interface</span><strong>HTML · CSS · JavaScript · English / Japanese</strong></li>
             <li><span>Automation</span><strong>n8n</strong></li>
             <li><span>Integrations</span><strong>HMAC-signed webhooks</strong></li>
             <li><span>Local AI</span><strong>llama.cpp · Qwen</strong></li>
@@ -245,14 +249,16 @@
               <p class="eyebrow">Product interface</p>
               <h2 id="preview-title">One workspace for operating business automation.</h2>
             </div>
-            <p>The approved ABAP dashboard brings operational status, workflow activity, schedules, agent executions, and useful actions into a consistent interface.</p>
+            <p>The approved ABAP dashboard brings operational status, workflow activity, schedules, agent executions, and useful actions into a consistent English and Japanese interface.</p>
           </div>
           <figure class="preview-frame reveal reveal-delay-1">
             <div class="preview-bar" aria-hidden="true">
               <span></span><span></span><span></span>
               <div>ABAP / Application dashboard</div>
             </div>
-            <img class="product-screenshot" src="assets/abap-dashboard-dark.png" width="1586" height="992" loading="lazy" decoding="async" alt="ABAP application dashboard showing operational overview cards, workflow activity, schedules, agent executions, system readiness, and navigation.">
+            <picture>
+              <img class="product-screenshot" src="assets/abap-dashboard-dark.png" width="1586" height="992" loading="lazy" decoding="async" alt="ABAP application dashboard showing operational overview cards, workflow activity, schedules, agent executions, system readiness, and navigation.">
+            </picture>
             <figcaption><span>Approved product interface</span><span>ABAP dashboard · Dark theme</span></figcaption>
           </figure>
         </div>
@@ -303,24 +309,25 @@
         <div class="shell status-layout">
           <div class="status-copy reveal">
             <p class="eyebrow">Project status</p>
-            <h2 id="status-title">Production deployment and HTTPS are live.</h2>
-            <p>Milestones 1 through 8 are complete. The production application is live with HTTPS at app.dennisbasadre.com.</p>
+            <h2 id="status-title">Production is live; the roadmap remains active.</h2>
+            <p>Milestones 1 through 5 are complete. Milestone 6 capabilities are implemented and privately tested, while selected integrations remain disabled in production. Milestones 7 and 8 are in progress: HTTPS is live, and the October 8 encrypted backup and isolated recovery drill passed.</p>
           </div>
           <div class="roadmap reveal reveal-delay-1" aria-label="Milestone progress">
-            <div class="roadmap-topline"><span>Milestone progress</span><strong>8 / 8 complete</strong></div>
+            <div class="roadmap-topline"><span>Completion roadmap</span><strong>5 complete · 1 tested · 2 in progress · 1 planned</strong></div>
             <ol>
-              <li class="complete"><span>1</span><small>Complete</small></li>
-              <li class="complete"><span>2</span><small>Complete</small></li>
-              <li class="complete"><span>3</span><small>Complete</small></li>
-              <li class="complete"><span>4</span><small>Complete</small></li>
-              <li class="complete"><span>5</span><small>Complete</small></li>
-              <li class="complete"><span>6</span><small>Complete</small></li>
-              <li class="complete"><span>7</span><small>Complete</small></li>
-              <li class="complete"><span>8</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 1 complete"><span>1</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 2 complete"><span>2</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 3 complete"><span>3</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 4 complete"><span>4</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 5 complete"><span>5</span><small>Complete</small></li>
+              <li class="tested" aria-label="Milestone 6 implemented and privately tested"><span>6</span><small>Tested</small></li>
+              <li class="current" aria-label="Milestone 7 in progress"><span>7</span><small>In progress</small></li>
+              <li class="current" aria-label="Milestone 8 in progress"><span>8</span><small>In progress</small></li>
+              <li aria-label="Milestone 9 planned"><span>9</span><small>Planned</small></li>
             </ol>
             <div class="current-milestone">
-              <span class="signal signal-complete"></span>
-              <div><small>Production status</small><strong>Application live with HTTPS</strong></div>
+              <span class="signal signal-progress"></span>
+              <div><small>Production status</small><strong>HTTPS live · Recovery drill passed · Roadmap work continues</strong></div>
             </div>
           </div>
         </div>
@@ -337,11 +344,15 @@
       </section>
     </main>
 
+
     <footer class="site-footer">
       <div class="shell footer-main">
         <div class="footer-brand">
           <a class="brand" href="#top" aria-label="ABAP home">
-            <img class="brand-logo brand-logo-footer" src="assets/abap-logo.png" width="150" height="50" alt="">
+            <picture>
+              <source srcset="assets/abap-logo.webp" type="image/webp">
+              <img class="brand-logo brand-logo-footer" src="assets/abap-logo.png" width="150" height="50" alt="">
+            </picture>
             <span class="brand-copy"><span>AI Business Automation Platform</span></span>
           </a>
           <p>Business automation built to be secure, observable, and recoverable.</p>
@@ -353,7 +364,7 @@
       </div>
       <div class="shell footer-bottom">
         <p>© <span data-year>2026</span> ABAP.</p>
-        <p>Static site · No analytics · No trackers</p>
+        <p>Static site · No advertising · No contact form</p>
       </div>
     </footer>
   </body>
