@@ -14,3 +14,6 @@ All six originals and optimized derivatives passed visual privacy review and hav
 | abap-workflow-current-en.webp | 1440 × 1000 | 1424 × 1710 | Synthetic records; English UI |
 
 Workflow execution is started-only and remains Running. No completed automation, configured schedule, or external dispatch is shown. AI Assistant is omitted because no isolated provider response was verified. Mobile is a browser viewport capture, not physical-device certification. CRM/invoice screens retain their current dense layout without visual alteration.
+
+## AI Assistant addition — November 5, 2026
+Live assistant capture with synthetic/public demonstration history; account identity replaced with Demo Admin for public display. Historical generated text is illustrative and may include unsupported feature claims; it is not an authoritative capability specification. Existing images unchanged.

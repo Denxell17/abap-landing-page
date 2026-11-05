@@ -361,3 +361,7 @@ h3 { margin-bottom: 12px; font-size: 1.18rem; letter-spacing: -.02em; }
   .primary-nav a { padding: 13px 10px !important; border-bottom: 1px solid var(--line); }
   .primary-nav .nav-cta { margin-top: 11px; text-align: center; border: 1px solid var(--line-strong); }
 }
+
+.assistant-demo-capture { margin: 2rem 0; }
+.assistant-demo-capture img { display: block; width: 100%; height: auto; border-radius: 1rem; }
+.assistant-demo-capture figcaption { margin-top: .75rem; line-height: 1.6; font-size: .875rem; }
