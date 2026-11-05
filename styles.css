@@ -117,6 +117,11 @@ h3 { margin-bottom: 12px; font-size: 1.18rem; letter-spacing: -.02em; }
 .solution-label span { display: inline-block; margin-bottom: 15px; color: var(--blue-bright); font-size: .72rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
 
 .capabilities { background: linear-gradient(180deg, var(--bg), #0b1621); }
+.advanced-assistant { border-top: 1px solid var(--line); }
+.advanced-assistant .capability-card { min-height: 0; }
+.advanced-assistant .capability-card > p { margin-bottom: 0; }
+.advanced-assistant-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; margin-top: 28px; }
+.advanced-assistant-actions > p { margin: 0; color: var(--muted); font-size: .84rem; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 80px; margin-bottom: 50px; }
 .section-heading h2 { max-width: 680px; margin-bottom: 0; }
 .section-heading > p { max-width: 400px; margin: 0 0 5px; color: var(--muted); }

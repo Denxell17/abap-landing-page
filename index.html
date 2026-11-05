@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ABAP — AI Business Automation Platform</title>
-    <meta name="description" content="ABAP is a portfolio application for managing business records and repeatable workflows.">
+    <meta name="description" content="ABAP v1.0.0: CRM, invoicing, employees, signed n8n workflows and a synthetic-only AI Assistant. Completed portfolio release with verified recovery.">
     <meta name="theme-color" content="#0b1116">
     <meta name="color-scheme" content="dark">
     <meta name="robots" content="index, follow">
@@ -14,11 +14,11 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ABAP">
     <meta property="og:title" content="ABAP — AI Business Automation Platform">
-    <meta property="og:description" content="Manage business records and repeatable workflows in a protected portfolio application.">
+    <meta property="og:description" content="ABAP v1.0.0 brings CRM, invoicing, employees, workflows and a synthetic-only AI Assistant into a protected portfolio application.">
     <meta property="og:url" content="https://abap.dennisbasadre.com/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="ABAP — AI Business Automation Platform">
-    <meta name="twitter:description" content="Manage business records and repeatable workflows in a protected portfolio application.">
+    <meta name="twitter:description" content="ABAP v1.0.0 brings CRM, invoicing, employees, workflows and a synthetic-only AI Assistant into a protected portfolio application.">
 
     <link rel="stylesheet" href="styles.css">
     <script src="public-rag-config.js"></script>
@@ -62,7 +62,7 @@
           <div class="hero-copy">
             <p class="eyebrow reveal">AI Business Automation Platform</p>
             <h1 id="hero-title" class="reveal reveal-delay-1">Business records and workflows. <span>One protected workspace.</span></h1>
-            <p class="hero-summary reveal reveal-delay-2">Manage employees, CRM leads and customers, invoices, and workflow execution history in a role-controlled application. ABAP is a production-hosted portfolio project with English and Japanese interfaces; optional integrations have separate availability boundaries.</p>
+            <p class="hero-summary reveal reveal-delay-2">Manage employees, CRM leads and customers, invoices, and workflow execution history in a role-controlled application. The completed v1.0.0 portfolio release includes English/Japanese localization and a live, synthetic-only Advanced AI Assistant.</p>
             <div class="hero-actions reveal reveal-delay-3">
               <a class="button button-primary" href="https://app.dennisbasadre.com">
                 Launch Application
@@ -71,9 +71,9 @@
               <a class="button button-secondary" href="#product-gallery">Explore the interface</a>
             </div>
             <ul class="hero-facts reveal reveal-delay-3" aria-label="Project facts">
-              <li><span class="signal signal-complete"></span>Milestones 1–5 complete</li>
+              <li><span class="signal signal-complete"></span>Completed — v1.0.0 · Milestones 1–9</li>
               <li><span class="signal signal-complete"></span>Production application live with HTTPS</li>
-              <li><span class="signal signal-complete"></span>Recovery drill verified October 8</li>
+              <li><span class="signal signal-complete"></span>Isolated application and n8n recovery verified</li>
             </ul>
           </div>
 
@@ -140,11 +140,11 @@
               <div class="card-number">03</div>
               <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12a4 4 0 0 1 4-4h3m1-3 3 3-3 3M16 12a4 4 0 0 1-4 4H9m-1 3-3-3 3-3"/></svg></div>
               <h3>Integrations &amp; AI</h3>
-              <p>Implemented and privately tested signed connections and provider-independent AI services; these protected-workflow integrations have separate production gates. The public knowledge assistant below is a separate integration.</p>
+              <p>HMAC-signed n8n dispatch and callbacks passed a controlled synthetic demonstration through authenticated public HTTPS pages. Shared production integrations remain disabled. The Advanced AI Assistant is live; the public knowledge chatbot below is separate.</p>
               <ul>
                 <li>Signed webhook integrations</li>
                 <li>Provider-independent AI services</li>
-                <li>Local Qwen through llama.cpp</li>
+                <li>Selectable free cloud AI models</li>
               </ul>
             </article>
 
@@ -152,7 +152,7 @@
               <div class="card-number">04</div>
               <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 4.7 3.2 7.7 8 9 4.8-1.3 8-4.3 8-9V7zM8 12l2.5 2.5L16 9"/></svg></div>
               <h3>Operations &amp; recovery</h3>
-              <p>Production persistence, health checks, encrypted backups, and tested recovery procedures.</p>
+              <p>PostgreSQL persistence, health/readiness monitoring, automated encrypted backups and verified isolated recovery.</p>
               <ul>
                 <li>PostgreSQL persistence</li>
                 <li>Health and readiness checks</li>
@@ -165,13 +165,55 @@
         </div>
       </section>
 
+      <section class="section advanced-assistant" id="advanced-assistant" aria-labelledby="advanced-assistant-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">Live authenticated demo</p>
+              <h2 id="advanced-assistant-title">Advanced ABAP AI Assistant</h2>
+            </div>
+            <p>Explore the deployed assistant with synthetic business examples, your choice of free AI models, and clear confirmation steps.</p>
+          </div>
+
+          <div class="capability-grid">
+            <article class="capability-card reveal">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg></div>
+              <h3>Selectable free AI models</h3>
+              <p>Manually choose from the configured free cloud models. Availability and shared provider quotas apply; there is no paid fallback.</p>
+            </article>
+            <article class="capability-card reveal reveal-delay-1">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h10M9 3v2m-3 0c0 5 3 8 7 10M12 5c0 5-3 8-7 10m8 6 4-10 4 10m-6-4h4"/></svg></div>
+              <h3>English &amp; Japanese</h3>
+              <p>Choose English or <span lang="ja">日本語</span> for assistant responses, independently of the interface language.</p>
+            </article>
+            <article class="capability-card reveal">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 10h14v11H5zM8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg></div>
+              <h3>Private conversation history</h3>
+              <p>Review history saved to your own account. Each question is independent; previous conversations are not sent to the model.</p>
+            </article>
+            <article class="capability-card reveal reveal-delay-1">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 4.7 3.2 7.7 8 9 4.8-1.3 8-4.3 8-9V7zM8 12l2.5 2.5L16 9"/></svg></div>
+              <h3>Review before confirming</h3>
+              <p>Review and explicitly confirm supported synthetic demo interactions. Demo changes affect isolated fictional records only.</p>
+            </article>
+          </div>
+
+          <p class="gallery-note">Current release: fixed synthetic/public questions and confirmation-protected fictional demo records. Free-form conversation, live business-record access and AI-initiated live business actions are future capabilities, not available in v1.0.0.</p>
+
+          <div class="advanced-assistant-actions reveal">
+            <a class="button button-primary" href="https://app.dennisbasadre.com/ai-assistant/advanced" aria-describedby="advanced-assistant-access">Try Advanced AI Assistant <span aria-hidden="true">↗</span></a>
+            <p id="advanced-assistant-access">Login with an authorized ABAP account is required.<br>Currently uses synthetic demo data only.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section security" id="security" aria-labelledby="security-title">
         <div class="security-glow" aria-hidden="true"></div>
         <div class="shell security-layout">
           <div class="security-copy reveal">
             <p class="eyebrow">Security &amp; recovery</p>
             <h2 id="security-title">Designed around controls that remain useful when systems fail.</h2>
-            <p>ABAP’s security and reliability principles cover how secrets, integrations, deployment, backups, recovery, local AI, and the public site are handled.</p>
+            <p>HTTPS, role-based access, server-side secrets, signed integrations, monitoring and recovery procedures support the completed portfolio release.</p>
             <div class="security-seal" aria-hidden="true">
               <svg viewBox="0 0 86 86"><circle cx="43" cy="43" r="37"/><path d="M43 22 27 29v12c0 11 6.4 18.7 16 22 9.6-3.3 16-11 16-22V29zM35 42l6 6 11-12"/></svg>
             </div>
@@ -181,9 +223,9 @@
             <li><span>01</span><div><strong>Secrets stay outside source control</strong><p>Secrets are kept separate from the codebase.</p></div></li>
             <li><span>02</span><div><strong>Signed external webhook requests</strong><p>External webhook integrations use HMAC signatures.</p></div></li>
             <li><span>03</span><div><strong>Least-privilege deployment design</strong><p>Deployment follows a least-privilege principle.</p></div></li>
-            <li><span>04</span><div><strong>Encrypted backups</strong><p>Production PostgreSQL backups are encrypted with Restic and stored in private Backblaze B2 storage.</p></div></li>
-            <li><span>05</span><div><strong>Documented and tested recovery</strong><p>On October 8, 2026, an isolated recovery drill restored 22 PostgreSQL tables, verified application records, and passed health and readiness checks.</p></div></li>
-            <li><span>06</span><div><strong>Separated public and local systems</strong><p>Local AI stays outside the public cloud deployment, while the public landing page remains available independently of the application server.</p></div></li>
+            <li><span>04</span><div><strong>Automated encrypted backups</strong><p>Scheduled PostgreSQL and n8n backups use encrypted private storage. The corrected scheduled n8n backup completed successfully on November 5, 2026.</p></div></li>
+            <li><span>05</span><div><strong>Documented and tested recovery</strong><p>Isolated PostgreSQL restoration and recovered-application startup passed health/readiness checks. Separate n8n recovery drills verified SQLite integrity and credential decryption. This is recovery evidence, not a claim of zero data-loss risk.</p></div></li>
+            <li><span>06</span><div><strong>Separate public and authenticated AI</strong><p>The public chatbot uses reviewed public knowledge. The authenticated Advanced AI Assistant uses only synthetic/public demonstrations; cloud models do not depend on an owner-operated local AI server.</p></div></li>
           </ol>
         </div>
       </section>
@@ -193,7 +235,7 @@
           <div class="section-intro reveal">
             <p class="eyebrow">Technology</p>
             <h2 id="technology-title">A direct, inspectable stack.</h2>
-            <p>The platform uses established application, automation, data, and local AI technologies.</p>
+            <p>The platform uses established application, automation, data and cloud AI technologies.</p>
           </div>
           <ul class="technology-list reveal reveal-delay-1" aria-label="Technology stack">
             <li><span>Application</span><strong>Python</strong></li>
@@ -203,7 +245,7 @@
             <li><span>Interface</span><strong>HTML · CSS · JavaScript · English / Japanese</strong></li>
             <li><span>Automation</span><strong>n8n</strong></li>
             <li><span>Integrations</span><strong>HMAC-signed webhooks</strong></li>
-            <li><span>Local AI</span><strong>llama.cpp · Qwen</strong></li>
+            <li><span>Cloud AI</span><strong>OpenRouter · Selectable free models</strong></li>
             <li><span>Quality</span><strong>Automated tests</strong></li>
           </ul>
         </div>
@@ -237,7 +279,7 @@
               <figcaption><h3>Mobile responsiveness</h3><p>The actual responsive dashboard at a 390 × 844 viewport. Full-page capture; the workflow table scrolls horizontally.</p><span>Synthetic demonstration data · View full image ↗</span></figcaption>
             </figure>
           </div>
-          <p class="gallery-note">These screenshots demonstrate the recorded local state, not production business data or commercial results. No AI Assistant screenshot is included because an isolated provider response has not been verified.</p>
+          <p class="gallery-note">These screenshots demonstrate the recorded local state, not production business data or commercial results. These November 3 captures predate final release acceptance; the workflow image shows its earlier manual run, not the later verified signed n8n demonstration.</p>
         </div>
       </section>
 
@@ -286,25 +328,26 @@
         <div class="shell status-layout">
           <div class="status-copy reveal">
             <p class="eyebrow">Project status</p>
-            <h2 id="status-title">Production is live; the roadmap remains active.</h2>
-            <p>Milestones 1 through 5 are complete. Milestone 6 capabilities are implemented and privately tested, while selected integrations remain disabled in production. Milestones 7 and 8 are in progress: HTTPS is live, and the October 8 encrypted backup and isolated recovery drill passed.</p>
+            <h2 id="status-title">Completed — v1.0.0</h2>
+            <p>Milestones 1–9 are complete for the approved portfolio scope: business records, workflows, signed n8n integration, the synthetic-only Advanced AI Assistant, production HTTPS, monitoring, automated backups, verified isolated recovery and release documentation. This is a completed portfolio release, not a claim of unrestricted AI or commercial certification.</p>
+            <p><a href="https://github.com/Denxell17/AI-Business-Automation-Platform/releases/tag/v1.0.0">View v1.0.0 release ↗</a> · <a href="https://github.com/Denxell17/AI-Business-Automation-Platform/blob/main/docs/roadmap/full-platform-completion-roadmap.md">Completed roadmap ↗</a> · <a href="https://github.com/Denxell17/AI-Business-Automation-Platform/blob/69a21d7/docs/deployment/final-platform-acceptance-20261104.md">Acceptance evidence ↗</a></p>
           </div>
           <div class="roadmap reveal reveal-delay-1" aria-label="Milestone progress">
-            <div class="roadmap-topline"><span>Completion roadmap</span><strong>5 complete · 1 tested · 2 in progress · 1 planned</strong></div>
+            <div class="roadmap-topline"><span>Completion roadmap</span><strong>9 milestones complete</strong></div>
             <ol>
               <li class="complete" aria-label="Milestone 1 complete"><span>1</span><small>Complete</small></li>
               <li class="complete" aria-label="Milestone 2 complete"><span>2</span><small>Complete</small></li>
               <li class="complete" aria-label="Milestone 3 complete"><span>3</span><small>Complete</small></li>
               <li class="complete" aria-label="Milestone 4 complete"><span>4</span><small>Complete</small></li>
               <li class="complete" aria-label="Milestone 5 complete"><span>5</span><small>Complete</small></li>
-              <li class="tested" aria-label="Milestone 6 implemented and privately tested"><span>6</span><small>Tested</small></li>
-              <li class="current" aria-label="Milestone 7 in progress"><span>7</span><small>In progress</small></li>
-              <li class="current" aria-label="Milestone 8 in progress"><span>8</span><small>In progress</small></li>
-              <li aria-label="Milestone 9 planned"><span>9</span><small>Planned</small></li>
+              <li class="complete" aria-label="Milestone 6 complete for approved scope"><span>6</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 7 complete for approved scope"><span>7</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 8 complete for approved scope"><span>8</span><small>Complete</small></li>
+              <li class="complete" aria-label="Milestone 9 complete for approved scope"><span>9</span><small>Complete</small></li>
             </ol>
             <div class="current-milestone">
-              <span class="signal signal-progress"></span>
-              <div><small>Production status</small><strong>HTTPS live · Recovery drill passed · Roadmap work continues</strong></div>
+              <span class="signal signal-complete"></span>
+              <div><small>Production status</small><strong>HTTPS live · Recovery verified · Scheduled backups passed</strong></div>
             </div>
           </div>
         </div>
@@ -332,7 +375,7 @@
             </picture>
             <span class="brand-copy"><span>AI Business Automation Platform</span></span>
           </a>
-          <p>Manage business records and repeatable workflows in a protected portfolio application.</p>
+          <p>ABAP v1.0.0 brings CRM, invoicing, employees, workflows and a synthetic-only AI Assistant into a protected portfolio application.</p>
         </div>
         <div class="footer-links">
           <div><h2>Project</h2><a href="https://app.dennisbasadre.com">Live application <span aria-hidden="true">↗</span></a><a href="https://github.com/Denxell17/AI-Business-Automation-Platform">Source repository <span aria-hidden="true">↗</span></a></div>

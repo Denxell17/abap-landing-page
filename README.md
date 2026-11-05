@@ -4,7 +4,13 @@ The public product landing page for **ABAP — AI Business Automation Platform**
 
 This site is intentionally built with plain HTML, CSS, and JavaScript. The static page needs no framework, build step, package manager, external fonts, application-authored analytics, or package-manager runtime dependencies. The existing public assistant loads Cloudflare Turnstile and calls the configured ABAP API after verification.
 
-The landing page distinguishes the live production application from capabilities that are implemented and privately tested. Milestones 1–5 are complete; Milestone 6 integrations are implemented and privately tested but not production-enabled; Milestones 7–8 remain in progress even though the application and HTTPS are live. On October 8, 2026, the production Restic/Backblaze B2 backup and isolated PostgreSQL 18.6 recovery drill passed: the encrypted snapshot was verified, 22 tables were restored, application records were checked, and the disposable application passed health and readiness checks.
+The landing page reflects **Completed — v1.0.0**, with milestones 1–9 complete for the approved cloud/synthetic portfolio scope. It highlights CRM, invoicing, employees, workflows, English/Japanese localization and the authenticated Advanced AI Assistant. Signed n8n integration was demonstrated through temporary authenticated HTTPS routes with disposable synthetic records; shared live integrations remain disabled. Automated backup success and isolated application/n8n recovery are verified, without claiming a host disaster restore or zero data-loss guarantee.
+
+Release provenance: [v1.0.0](https://github.com/Denxell17/AI-Business-Automation-Platform/releases/tag/v1.0.0) and [acceptance record at 69a21d7](https://github.com/Denxell17/AI-Business-Automation-Platform/blob/69a21d7/docs/deployment/final-platform-acceptance-20261104.md). The November 5 scheduled n8n service completed at 05:30:58 UTC, success/exit 0. Detailed fresh snapshot IDs were not independently read.
+
+The Advanced AI Assistant supports two selectable free cloud models, English/Japanese responses, private account history and confirmation-protected synthetic demonstrations. Quotas apply; no paid fallback. Free-form conversation, live business-record access and AI-initiated live actions remain future capabilities, not release promises. The existing public RAG chatbot remains separate and unchanged.
+
+**Publication:** owner approved the v1.0.0 landing-page update on November 5, 2026. Production `main` automatically deploys through the existing Cloudflare Pages project; application/VPS services are outside this deployment.
 
 ## Local preview
 
@@ -60,6 +66,6 @@ Cloudflare Pages will apply the security policy in `_headers`. The unchanged rem
 
 Six genuine captures from November 3, 2026 are stored as `assets/abap-*-current-*.webp` and `assets/abap-dashboard-mobile-en.webp`. They use synthetic records in an isolated local SQLite demonstration. The English dashboard leads the page; the gallery covers CRM, invoice details, workflows, Japanese interface labels, and mobile reflow. Images link to their full-size files.
 
-The workflow capture shows a started-only manual execution that remains Running, no configured schedules, and disabled n8n dispatch. Japanese localization does not translate business records; some date formatting remains English. No AI Assistant screenshot or verified provider response is claimed. See `SCREENSHOTS.md` for provenance and privacy results.
+The workflow capture shows a started-only manual execution that remains Running, no configured schedules, and disabled n8n dispatch. Japanese localization does not translate business records; some date formatting remains English. No AI Assistant screenshot is included; verified live provider evidence is linked above. See `SCREENSHOTS.md` for provenance and privacy results.
 
 Cloudflare settings above were verified by the owner. This candidate preserves remote RAG and Turnstile behavior; it changes no headers, scripts, release flags, keys, or endpoints. No live assistant request was made during candidate validation.
