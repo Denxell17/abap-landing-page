@@ -7,12 +7,27 @@
     const header = document.querySelector('[data-header]');
     const toggle = document.querySelector('[data-nav-toggle]');
     const navigation = document.querySelector('[data-nav]');
+    const japanese = document.documentElement.lang === 'ja';
+    const menuLabels = japanese
+      ? { open: 'メニューを開く', close: 'メニューを閉じる' }
+      : { open: 'Open navigation', close: 'Close navigation' };
+
+    // Matching section IDs make language links useful with or without JavaScript.
+    const updateLanguageLinks = () => {
+      document.querySelectorAll('[data-language]').forEach((link) => {
+        const path = link.dataset.language === 'ja' ? '/ja/' : '/';
+        link.href = path + window.location.hash;
+      });
+    };
+    updateLanguageLinks();
+    window.addEventListener('hashchange', updateLanguageLinks);
+
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     const setMenuOpen = (open) => {
       if (!toggle || !navigation) return;
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      toggle.setAttribute('aria-label', open ? menuLabels.close : menuLabels.open);
       navigation.classList.toggle('is-open', open);
       document.body.classList.toggle('nav-open', open);
     };

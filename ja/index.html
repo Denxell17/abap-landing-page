@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABAP — AI Business Automation Platform</title>
+    <meta name="description" content="ABAP v1.0.0：CRM、請求書、従業員管理、署名付きn8nワークフロー、架空データ専用のAIアシスタント。復旧検証済みのポートフォリオ完成版です。">
+    <meta name="theme-color" content="#0b1116">
+    <meta name="color-scheme" content="dark">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://abap.dennisbasadre.com/ja/">
+    <link rel="alternate" hreflang="en" href="https://abap.dennisbasadre.com/">
+    <link rel="alternate" hreflang="ja" href="https://abap.dennisbasadre.com/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://abap.dennisbasadre.com/">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ABAP">
+    <meta property="og:title" content="ABAP — AI Business Automation Platform">
+    <meta property="og:description" content="ABAP v1.0.0は、CRM、請求書、従業員、ワークフロー、架空データのみを扱うAIアシスタントを、安全に利用できるポートフォリオアプリです。">
+    <meta property="og:url" content="https://abap.dennisbasadre.com/ja/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ABAP — AI Business Automation Platform">
+    <meta name="twitter:description" content="ABAP v1.0.0は、CRM、請求書、従業員、ワークフロー、架空データのみを扱うAIアシスタントを、安全に利用できるポートフォリオアプリです。">
+
+    <link rel="stylesheet" href="/styles.css?v=localization-20261107">
+    <script src="/public-rag-config.js"></script>
+    <script src="/script.js?v=localization-20261107"></script>
+    <script src="/public-rag-chat.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へスキップ</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="brand" href="#top" aria-label="ABAP ホーム">
+          <picture>
+            <source srcset="/assets/abap-logo.webp" type="image/webp">
+            <img class="brand-logo" src="/assets/abap-logo.png" width="120" height="40" alt="">
+          </picture>
+          <span class="brand-copy"><span>AI Business Automation Platform</span></span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="メニューを開く" data-nav-toggle>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-navigation" aria-label="メインナビゲーション" data-nav>
+          <a href="#product-gallery">画面紹介</a>
+          <a href="#capabilities">主な機能</a>
+          <a href="#security">セキュリティ</a>
+          <a href="#technology">技術構成</a>
+          <a href="#assistant" data-public-rag-navigation hidden>AIアシスタント</a>
+          <a href="#status">開発状況</a>
+          <a href="https://github.com/Denxell17/AI-Business-Automation-Platform">ソースコード</a>
+          <a class="nav-cta" href="https://app.dennisbasadre.com">アプリを開く <span aria-hidden="true">↗</span></a>
+          <div class="language-switch" role="group" aria-label="表示言語">
+            <a href="/" lang="en" hreflang="en" data-language="en" aria-label="英語で表示">EN</a>
+            <span aria-hidden="true">|</span>
+            <a href="/ja/" lang="ja" hreflang="ja" data-language="ja" aria-current="page" aria-label="日本語で表示">日本語</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid-overlay" aria-hidden="true"></div>
+        <div class="shell hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow reveal">AI Business Automation Platform</p>
+            <h1 id="hero-title" class="reveal reveal-delay-1">業務データとワークフローを、 <span>ひとつの安全な環境で。</span></h1>
+            <p class="hero-summary reveal reveal-delay-2">従業員、CRMの見込み客・顧客、請求書、ワークフローの実行履歴を、役割に応じたアクセス制御のもとで管理。完成したポートフォリオ版 v1.0.0 は英語・日本語に対応し、架空のデモデータのみを扱う Advanced AI Assistant も公開しています。</p>
+            <div class="hero-actions reveal reveal-delay-3">
+              <a class="button button-primary" href="https://app.dennisbasadre.com">
+                アプリを開く
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6M3 10h10" /></svg>
+              </a>
+              <a class="button button-secondary" href="#product-gallery">画面を見る</a>
+            </div>
+            <ul class="hero-facts reveal reveal-delay-3" aria-label="プロジェクトの概要">
+              <li><span class="signal signal-complete"></span>v1.0.0 完成 · マイルストーン1〜9を完了</li>
+              <li><span class="signal signal-complete"></span>HTTPS対応の本番アプリを公開中</li>
+              <li><span class="signal signal-complete"></span>隔離環境でアプリとn8nの復旧を検証済み</li>
+            </ul>
+          </div>
+
+          <figure class="preview-frame hero-product" aria-labelledby="hero-capture-caption">
+            <a href="/assets/abap-dashboard-current-en.webp" aria-label="英語ダッシュボードの画像を拡大表示">
+              <img class="product-screenshot" src="/assets/abap-dashboard-current-en.webp" width="1424" height="1105" fetchpriority="high" decoding="async" alt="架空の従業員6名、3部門、CRM・請求書の概要、実行中の手動ワークフローを表示したABAPダッシュボード。">
+            </a>
+            <figcaption id="hero-capture-caption">アプリ画面 · 架空のデモデータ · 2026年11月3日撮影</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section problem-solution" aria-labelledby="problem-title">
+        <div class="shell split-layout">
+          <div class="section-intro reveal">
+            <p class="eyebrow">業務の課題</p>
+            <h2 id="problem-title">業務の状況を、見えないままにしない。</h2>
+          </div>
+          <div class="problem-content reveal reveal-delay-1">
+            <p class="lead">小規模な事業では、連携しないツールや繰り返しの手作業に頼りがちです。自動化を導入しても、稼働状況の把握、安全性の確保、障害からの復旧が課題になります。</p>
+            <div class="problem-divider" aria-hidden="true"><span></span></div>
+            <div class="solution-label"><span>ABAPのアプローチ</span></div>
+            <p>Dockerベースのひとつのシステムに、業務データ、自動化、外部連携、AIサービス、監視、バックアップ、復旧手順を集約。運用に必要な管理・保護の仕組みを確認しながら、実用的なワークフローを構築・運用できます。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section capabilities" id="capabilities" aria-labelledby="capabilities-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">プラットフォームの機能</p>
+              <h2 id="capabilities-title">業務自動化を支える、実装済みの機能。</h2>
+            </div>
+            <p>業務データ、ワークフローの実行、外部連携、AI、運用上の保護機能を、ひとつのプラットフォームにまとめています。</p>
+          </div>
+
+          <div class="capability-grid">
+            <article class="capability-card reveal">
+              <div class="card-number">01</div>
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4zM8 7V4h8v3M8 12h8m-8 4h5"/></svg></div>
+              <h3>業務データ管理</h3>
+              <p>日々の業務データとアクセス制限付きの文書を一元管理。</p>
+              <ul>
+                <li>従業員管理</li>
+                <li>CRMの見込み客・顧客管理</li>
+                <li>請求書とアクセス制限付きPDF文書</li>
+              </ul>
+            </article>
+
+            <article class="capability-card reveal reveal-delay-1">
+              <div class="card-number">02</div>
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4v5m0 0h5M6 9l4-4m8 15v-5m0 0h-5m5 0-4 4M5 14a7 7 0 0 0 12 3M19 10A7 7 0 0 0 7 7"/></svg></div>
+              <h3>ワークフローエンジン</h3>
+              <p>本番環境で稼働するスケジュール実行とバックグラウンド処理に、非公開のn8n連携機能を組み合わせています。</p>
+              <ul>
+                <li>ワークフローのスケジュール実行</li>
+                <li>バックグラウンドワーカー</li>
+                <li>n8nによる自動化との連携</li>
+              </ul>
+            </article>
+
+            <article class="capability-card reveal reveal-delay-2">
+              <div class="card-number">03</div>
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 12a4 4 0 0 1 4-4h3m1-3 3 3-3 3M16 12a4 4 0 0 1-4 4H9m-1 3-3-3 3-3"/></svg></div>
+              <h3>外部連携・AI</h3>
+              <p>HMAC署名付きのn8nへの送信とコールバックは、認証が必要な公開HTTPS画面を使った、架空データによる管理下のデモで検証済みです。共有の本番連携は引き続き無効です。Advanced AI Assistant は公開中で、下記の公開ナレッジチャットボットとは別の機能です。</p>
+              <ul>
+                <li>署名付きWebhook連携</li>
+                <li>プロバイダーに依存しないAIサービス構成</li>
+                <li>選択可能な無料クラウドAIモデル</li>
+              </ul>
+            </article>
+
+            <article class="capability-card reveal reveal-delay-3">
+              <div class="card-number">04</div>
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 4.7 3.2 7.7 8 9 4.8-1.3 8-4.3 8-9V7zM8 12l2.5 2.5L16 9"/></svg></div>
+              <h3>運用・復旧</h3>
+              <p>PostgreSQLによるデータ永続化、ヘルス・レディネス監視、自動暗号化バックアップ、隔離環境での復旧検証に対応。</p>
+              <ul>
+                <li>PostgreSQLによるデータ永続化</li>
+                <li>ヘルス・レディネスチェック</li>
+                <li>Restic/B2による暗号化バックアップ</li>
+                <li>隔離環境での復旧訓練</li>
+                <li>ロールバック手順と自動テスト</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section advanced-assistant" id="advanced-assistant" aria-labelledby="advanced-assistant-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">ログインして試せる公開デモ</p>
+              <h2 id="advanced-assistant-title">Advanced ABAP AI Assistant</h2>
+            </div>
+            <p>架空の業務データを使い、無料AIモデルを選択しながら、明確な確認手順に沿って公開中のアシスタントを試せます。</p>
+          </div>
+
+          <div class="capability-grid">
+            <article class="capability-card reveal">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg></div>
+              <h3>無料AIモデルを選択</h3>
+              <p>設定済みの無料クラウドモデルから手動で選択できます。利用可否やプロバイダーの共有利用枠による制限があり、有料モデルへの自動切り替えは行いません。</p>
+            </article>
+            <article class="capability-card reveal reveal-delay-1">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h10M9 3v2m-3 0c0 5 3 8 7 10M12 5c0 5-3 8-7 10m8 6 4-10 4 10m-6-4h4"/></svg></div>
+              <h3>英語・日本語に対応</h3>
+              <p>アシスタントの回答言語は、画面の言語とは別に英語または <span lang="ja">日本語</span> を選択できます。</p>
+            </article>
+            <article class="capability-card reveal">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 10h14v11H5zM8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg></div>
+              <h3>アカウントごとの非公開履歴</h3>
+              <p>自分のアカウントに保存された履歴を確認できます。各質問は独立して処理され、過去の会話はモデルに送信されません。</p>
+            </article>
+            <article class="capability-card reveal reveal-delay-1">
+              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v5c0 4.7 3.2 7.7 8 9 4.8-1.3 8-4.3 8-9V7zM8 12l2.5 2.5L16 9"/></svg></div>
+              <h3>内容を確認してから確定</h3>
+              <p>対応するデモ操作は、内容を確認して明示的に確定します。変更の対象は、隔離された架空のレコードのみです。</p>
+            </article>
+          </div>
+
+          <p class="gallery-note">現在のAIアシスタントは、AIモデルの選択と、確認操作を必要とする架空データの操作を含む業務デモに対応しています。自由形式の会話、実際の業務データへのアクセス、AIが自ら開始する業務操作は有効になっていません。</p>
+
+<div class="advanced-assistant-actions reveal">
+            <a class="button button-primary" href="https://app.dennisbasadre.com/ai-assistant/advanced" aria-describedby="advanced-assistant-access">Advanced AI Assistant を試す <span aria-hidden="true">↗</span></a>
+            <p id="advanced-assistant-access">利用権限のあるABAPアカウントでのログインが必要です。<br>現在は架空のデモデータのみを使用しています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section security" id="security" aria-labelledby="security-title">
+        <div class="security-glow" aria-hidden="true"></div>
+        <div class="shell security-layout">
+          <div class="security-copy reveal">
+            <p class="eyebrow">セキュリティ・復旧</p>
+            <h2 id="security-title">障害時にも機能する、保護と復旧の仕組み。</h2>
+            <p>HTTPS、役割別のアクセス制御、サーバー側での機密情報管理、署名付き連携、監視、復旧手順で、完成したポートフォリオ版を支えています。</p>
+            <div class="security-seal" aria-hidden="true">
+              <svg viewBox="0 0 86 86"><circle cx="43" cy="43" r="37"/><path d="M43 22 27 29v12c0 11 6.4 18.7 16 22 9.6-3.3 16-11 16-22V29zM35 42l6 6 11-12"/></svg>
+            </div>
+          </div>
+
+          <ol class="principle-list reveal reveal-delay-1">
+            <li><span>01</span><div><strong>機密情報をソース管理から分離</strong><p>機密情報はコードベースと分けて管理します。</p></div></li>
+            <li><span>02</span><div><strong>外部Webhookリクエストへの署名</strong><p>外部Webhook連携にはHMAC署名を使用します。</p></div></li>
+            <li><span>03</span><div><strong>最小権限に基づくデプロイ設計</strong><p>必要最小限の権限で稼働するよう設計しています。</p></div></li>
+            <li><span>04</span><div><strong>暗号化バックアップの自動実行</strong><p>PostgreSQLとn8nの定期バックアップは、暗号化された非公開ストレージに保存します。修正後のn8n定期バックアップは、2026年11月5日に正常完了しました。</p></div></li>
+            <li><span>05</span><div><strong>文書化・検証済みの復旧手順</strong><p>隔離環境でPostgreSQLを復元し、復旧したアプリの起動後にヘルス・レディネスチェックを実施して合格しました。別途行ったn8nの復旧訓練では、SQLiteの整合性と認証情報の復号を確認しています。これは復旧実績を示すもので、データ消失リスクがゼロであることを保証するものではありません。</p></div></li>
+            <li><span>06</span><div><strong>公開AIと認証付きAIを分離</strong><p>公開チャットボットは、レビュー済みの公開ナレッジを使用します。認証付きの Advanced AI Assistant は架空データ・公開情報によるデモのみを扱い、クラウドモデルの利用に運営者のローカルAIサーバーは必要ありません。</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section technology" id="technology" aria-labelledby="technology-title">
+        <div class="shell technology-layout">
+          <div class="section-intro reveal">
+            <p class="eyebrow">技術構成</p>
+            <h2 id="technology-title">構成を確認しやすい、明快な技術スタック。</h2>
+            <p>アプリ開発、自動化、データ管理、クラウドAIの各分野で広く使われる技術を採用しています。</p>
+          </div>
+          <ul class="technology-list reveal reveal-delay-1" aria-label="技術スタック">
+            <li><span>アプリケーション</span><strong>Python</strong></li>
+            <li><span>API</span><strong>FastAPI</strong></li>
+            <li><span>データ</span><strong>PostgreSQL</strong></li>
+            <li><span>実行環境</span><strong>Docker Compose</strong></li>
+            <li><span>インターフェース</span><strong>HTML · CSS · JavaScript · 英語／日本語</strong></li>
+            <li><span>自動化</span><strong>n8n</strong></li>
+            <li><span>外部連携</span><strong>HMAC署名付きWebhook</strong></li>
+            <li><span>クラウドAI</span><strong>OpenRouter · 無料モデルを選択可能</strong></li>
+            <li><span>品質管理</span><strong>自動テスト</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section product-preview" id="product-gallery" aria-labelledby="preview-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div><p class="eyebrow">アプリの画面紹介</p><h2 id="preview-title">実際の画面で、実装内容を確認。</h2></div>
+            <p>架空データを使ったアプリのデモ画面です。基本画面は2026年11月3日にローカルで撮影し、AIアシスタントは11月5日に公開中の環境で撮影してアカウント表示を匿名化しました。画像を選ぶと拡大表示できます。</p>
+          </div>
+          <div class="product-gallery">
+            <figure class="gallery-card">
+              <a class="gallery-image" href="/assets/abap-crm-current-en.webp" aria-label="CRMの見込み客一覧の画像を拡大表示"><img src="/assets/abap-crm-current-en.webp" width="1440" height="1000" loading="lazy" decoding="async" alt="架空の連絡先3件とexample.testのメールアドレスを表示したCRMの見込み客一覧。"></a>
+              <figcaption><h3>CRMの見込み客</h3><p>新規・顧客化済みのステージを持つ架空の連絡先。</p><span>架空のデモデータ · 画像を拡大 ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="/assets/abap-invoice-current-en.webp" aria-label="顧客向け請求書の画像を拡大表示"><img src="/assets/abap-invoice-current-en.webp" width="1424" height="1512" loading="lazy" decoding="async" alt="合計USD 900の明細とアクセス制限付き文書のダウンロード機能を示す、架空の請求書DEMO-2026-001。"></a>
+              <figcaption><h3>顧客向け請求書</h3><p>明細の金額計算、送付済み請求書、アクセス制限付きPDFのダウンロードを表示。金額はすべて架空です。</p><span>架空のデモデータ · 画像を拡大 ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="/assets/abap-workflow-current-en.webp" aria-label="実行履歴付きワークフローの画像を拡大表示"><img src="/assets/abap-workflow-current-en.webp" width="1424" height="1710" loading="lazy" decoding="async" alt="1件のタスクと実行中の履歴がある手動オンボーディングワークフロー。撮影時点ではn8nへの送信は無効で、スケジュールは未設定。"></a>
+              <figcaption><h3>ワークフローの実行履歴</h3><p>有効な手動ワークフローの、開始のみを行った実行履歴です。状態はRunningのままで、自動処理の完了や外部送信を示すものではありません。</p><span>架空のデモデータ · 画像を拡大 ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="/assets/abap-dashboard-current-ja.webp" aria-label="日本語インターフェースの画像を拡大表示"><img src="/assets/abap-dashboard-current-ja.webp" width="1424" height="1105" loading="lazy" decoding="async" alt="画面ラベルを日本語化し、架空の英語業務データをそのまま表示したABAPダッシュボード。"></a>
+              <figcaption><h3>日本語インターフェース</h3><p>同じ架空データを使い、画面ラベルを日本語化しています。業務データと一部の日付表記は英語のままです。</p><span>架空のデモデータ · 画像を拡大 ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="/assets/abap-dashboard-mobile-en.webp" aria-label="モバイル表示の画像を拡大表示"><img src="/assets/abap-dashboard-mobile-en.webp" width="375" height="2567" loading="lazy" decoding="async" alt="集計カードと運用パネルを縦に配置した、ABAPダッシュボードのモバイル全画面キャプチャ。"></a>
+              <figcaption><h3>モバイル対応</h3><p>390 × 844の表示領域で撮影した実際のレスポンシブ画面です。ページ全体を撮影しており、ワークフローの表は横スクロールに対応しています。</p><span>架空のデモデータ · 画像を拡大 ↗</span></figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <a class="gallery-image" href="/assets/abap-ai-assistant-demo.png" aria-label="AIアシスタントのデモ画像を拡大表示"><img src="/assets/abap-ai-assistant-demo.png" width="1586" height="992" loading="lazy" decoding="async" alt="モデル選択、英語・日本語の回答設定、整形された履歴、Demo Adminのアカウント表示がある、ABAP AI Assistantの架空データによるデモ。"></a>
+              <figcaption><h3>AIアシスタント</h3><p>手動でのモデル選択、英語・日本語の回答設定、整形された非公開履歴を表示。架空データのデモで、アカウント表示は匿名化しています。</p><span>2026年11月5日撮影 · 画像を拡大 ↗</span></figcaption>
+            </figure>
+          </div>
+          <p class="gallery-note">これらは架空データによるデモであり、本番の業務データや商用の成果を示すものではありません。過去のAI出力は参考例で、検証済みの機能仕様ではありません。11月3日の画像は最終リリースの受け入れ確認前に撮影したもので、ワークフロー画像は当時の手動実行を示しています。後日検証した署名付きn8n連携のデモとは異なります。</p>
+        </div>
+      </section>
+
+      <section class="section public-rag" id="assistant" aria-labelledby="public-rag-title" data-public-rag-section hidden>
+        <div class="shell public-rag-layout">
+          <div class="section-intro reveal">
+            <p class="eyebrow">公開ナレッジアシスタント</p>
+            <h2 id="public-rag-title">ABAPについて、知りたいことを質問。</h2>
+            <p>アシスタントが検索するのは、ABAPのレビュー済み公開ナレッジベースのみです。非公開のアプリデータ、顧客情報、内部文書にはアクセスしません。</p>
+          </div>
+
+          <div class="public-rag-panel reveal reveal-delay-1">
+            <form id="public-rag-form" data-endpoint="https://app.dennisbasadre.com/api/public/rag/chat" novalidate>
+              <div class="public-rag-field">
+                <label for="public-rag-language">回答言語</label>
+                <select id="public-rag-language" name="language">
+                  <option value="auto">自動判定</option>
+                  <option value="en">英語</option>
+                  <option value="ja">日本語</option>
+                </select>
+              </div>
+
+              <div class="public-rag-field">
+                <label for="public-rag-question">業務に関する質問</label>
+                <textarea id="public-rag-question" name="question" rows="4" maxlength="500" placeholder="ABAPとは何ですか。どのような業務の課題を解決できますか。" required></textarea>
+                <small>500文字以内で入力してください。機密情報や個人情報は含めないでください。</small>
+              </div>
+
+              <div class="public-rag-turnstile" data-public-rag-turnstile aria-label="セキュリティ確認"></div>
+              <input type="hidden" name="turnstile_token" value="">
+
+              <button class="button button-primary" type="submit">AIアシスタントに質問</button>
+              <p class="public-rag-status" id="public-rag-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <section class="public-rag-answer" id="public-rag-answer" aria-labelledby="public-rag-answer-title" tabindex="-1" hidden>
+              <h3 id="public-rag-answer-title">アシスタントの回答</h3>
+              <p data-public-rag-answer></p>
+              <div class="public-rag-sources" data-public-rag-sources></div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section status" id="status" aria-labelledby="status-title">
+        <div class="shell status-layout">
+          <div class="status-copy reveal">
+            <p class="eyebrow">プロジェクトの状況</p>
+            <h2 id="status-title">ABAP v1.0.0 — リリース済み</h2>
+            <p>定義したv1.0のリリース範囲について、全9件の開発マイルストーンを完了しました。公開中のABAP v1.0.0は、CRM、請求書、従業員管理、ワークフロー自動化、署名付きn8n連携、複数モデル対応のAIアシスタントを備えた業務自動化プラットフォームです。英語・日本語対応、安全なHTTPSでの公開、本番監視、自動バックアップ、隔離環境での復旧検証を含みます。</p>
+            <p><a href="https://github.com/Denxell17/AI-Business-Automation-Platform/releases/tag/v1.0.0">v1.0.0のリリースを見る ↗</a> · <a href="https://github.com/Denxell17/AI-Business-Automation-Platform/blob/main/docs/roadmap/full-platform-completion-roadmap.md">完了したロードマップ ↗</a> · <a href="https://github.com/Denxell17/AI-Business-Automation-Platform/blob/69a21d7/docs/deployment/final-platform-acceptance-20261104.md">受け入れ確認の記録 ↗</a></p>
+          </div>
+          <div class="roadmap reveal reveal-delay-1" aria-label="マイルストーンの進捗">
+            <div class="roadmap-topline"><span>開発ロードマップ</span><strong>全9件のマイルストーンを完了</strong></div>
+            <ol>
+              <li class="complete" aria-label="マイルストーン1 完了"><span>1</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン2 完了"><span>2</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン3 完了"><span>3</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン4 完了"><span>4</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン5 完了"><span>5</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン6 承認済みの範囲を完了"><span>6</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン7 承認済みの範囲を完了"><span>7</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン8 承認済みの範囲を完了"><span>8</span><small>完了</small></li>
+              <li class="complete" aria-label="マイルストーン9 承認済みの範囲を完了"><span>9</span><small>完了</small></li>
+            </ol>
+            <div class="current-milestone">
+              <span class="signal signal-complete"></span>
+              <div><small>本番環境の状況</small><strong>HTTPS公開中 · 復旧検証済み · 定期バックアップ稼働中</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" aria-labelledby="cta-title">
+        <div class="cta-grid" aria-hidden="true"></div>
+        <div class="shell cta-content reveal">
+          <p class="eyebrow">本番アプリケーション</p>
+          <h2 id="cta-title">ABAPを開く。</h2>
+          <p>本番アプリを開きます。保護された機能を利用するには認証が必要です。</p>
+          <a class="button button-light" href="https://app.dennisbasadre.com">アプリを開く <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+
+    <dialog class="screenshot-viewer" data-screenshot-viewer aria-labelledby="screenshot-viewer-title" aria-describedby="screenshot-viewer-caption">
+      <div class="screenshot-viewer-content">
+        <div class="screenshot-viewer-toolbar">
+          <h2 id="screenshot-viewer-title">スクリーンショットのプレビュー</h2>
+          <button class="screenshot-viewer-close" type="button" data-screenshot-close aria-label="スクリーンショットのプレビューを閉じる">×</button>
+        </div>
+        <img class="screenshot-viewer-image" data-screenshot-image alt="">
+        <p id="screenshot-viewer-caption" data-screenshot-caption></p>
+        <a class="screenshot-viewer-original" data-screenshot-original target="_blank" rel="noopener noreferrer">元の画像をフル解像度で開く（新しいタブ）↗</a>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="ABAP ホーム">
+            <picture>
+              <source srcset="/assets/abap-logo.webp" type="image/webp">
+              <img class="brand-logo brand-logo-footer" src="/assets/abap-logo.png" width="150" height="50" alt="">
+            </picture>
+            <span class="brand-copy"><span>AI Business Automation Platform</span></span>
+          </a>
+          <p>ABAP v1.0.0は、CRM、請求書、従業員、ワークフロー、架空データのみを扱うAIアシスタントを、安全に利用できるポートフォリオアプリです。</p>
+        </div>
+        <div class="footer-links">
+          <div><h2>プロジェクト</h2><a href="https://app.dennisbasadre.com">公開アプリ <span aria-hidden="true">↗</span></a><a href="https://github.com/Denxell17/AI-Business-Automation-Platform">ソースリポジトリ <span aria-hidden="true">↗</span></a></div>
+          <div><h2>関連リンク</h2><a href="https://dennisbasadre.com">ポートフォリオ <span aria-hidden="true">↗</span></a><a href="#status">プロジェクトの状況</a></div>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <p>© <span data-year>2026</span> ABAP.</p>
+        <p>静的サイト · 広告なし · お問い合わせフォームなし</p>
+      </div>
+    </footer>
+  </body>
+</html>

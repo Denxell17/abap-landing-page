@@ -2,6 +2,17 @@
   'use strict';
 
   const initialize = () => {
+    const japanese = document.documentElement.lang === 'ja';
+    const messages = {
+      "verification": "セキュリティ確認を利用できません。もう一度お試しください。",
+      "verificationLater": "セキュリティ確認を利用できません。時間をおいてお試しください。",
+      "question": "500文字以内で質問を入力してください。",
+      "challenge": "質問する前にセキュリティ確認を完了してください。",
+      "checking": "公開ナレッジベースを確認しています…",
+      "unavailable": "現在、回答を取得できません。時間をおいてお試しください。",
+      "sources": "参照元"
+    };
+    const text = (key, english) => japanese ? messages[key] : english;
     const config = window.ABAP_PUBLIC_RAG_CONFIG;
     const section = document.querySelector('[data-public-rag-section]');
     const navigation = document.querySelector('[data-public-rag-navigation]');
@@ -48,6 +59,7 @@
       widgetId = window.turnstile.render(turnstileContainer, {
         sitekey: config.turnstileSiteKey,
         action: 'abap_public_rag',
+        language: japanese ? 'ja' : 'en',
         callback: (value) => {
           token.value = value;
           setStatus('');
@@ -55,7 +67,7 @@
         'expired-callback': resetChallenge,
         'error-callback': () => {
           token.value = '';
-          setStatus('Security verification is unavailable. Please try again.');
+          setStatus(text('verification', 'Security verification is unavailable. Please try again.'));
         }
       });
     };
@@ -66,7 +78,7 @@
     challengeScript.async = true;
     challengeScript.defer = true;
     challengeScript.onerror = () => {
-      setStatus('Security verification is unavailable. Please try again later.');
+      setStatus(text('verificationLater', 'Security verification is unavailable. Please try again later.'));
     };
     document.head.append(challengeScript);
 
@@ -74,12 +86,12 @@
       event.preventDefault();
       const cleanQuestion = question.value.trim();
       if (!cleanQuestion || cleanQuestion.length > config.maximumQuestionCharacters) {
-        setStatus('Enter a question of up to 500 characters.');
+        setStatus(text('question', 'Enter a question of up to 500 characters.'));
         question.focus();
         return;
       }
       if (!token.value) {
-        setStatus('Complete the security verification before asking.');
+        setStatus(text('challenge', 'Complete the security verification before asking.'));
         return;
       }
 
@@ -87,7 +99,7 @@
       answerPanel.hidden = true;
       answerText.textContent = '';
       sources.replaceChildren();
-      setStatus('Checking the public knowledge base…');
+      setStatus(text('checking', 'Checking the public knowledge base…'));
       revealElement(status);
 
       try {
@@ -108,7 +120,7 @@
         answerText.textContent = payload.answer;
         if (payload.sources.length) {
           const heading = document.createElement('h4');
-          heading.textContent = 'Sources';
+          heading.textContent = text('sources', 'Sources');
           const list = document.createElement('ul');
           payload.sources.forEach((source) => {
             if (!source || typeof source.title !== 'string' || typeof source.heading !== 'string') return;
@@ -123,7 +135,7 @@
         answerPanel.focus({ preventScroll: true });
         revealElement(answerPanel);
       } catch (_error) {
-        setStatus('An answer is not available right now. Please try again later.');
+        setStatus(text('unavailable', 'An answer is not available right now. Please try again later.'));
         revealElement(status);
       } finally {
         submit.disabled = false;
