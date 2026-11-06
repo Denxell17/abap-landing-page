@@ -20,9 +20,9 @@
     <meta name="twitter:title" content="ABAP — AI Business Automation Platform">
     <meta name="twitter:description" content="ABAP v1.0.0 brings CRM, invoicing, employees, workflows and a synthetic-only AI Assistant into a protected portfolio application.">
 
-    <link rel="stylesheet" href="styles.css?v=assistant-demo-20261105">
+    <link rel="stylesheet" href="styles.css?v=lightbox-20261106">
     <script src="public-rag-config.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=lightbox-20261106"></script>
     <script src="public-rag-chat.js"></script>
   </head>
   <body>
@@ -368,6 +368,18 @@
       </section>
     </main>
 
+
+    <dialog class="screenshot-viewer" data-screenshot-viewer aria-labelledby="screenshot-viewer-title" aria-describedby="screenshot-viewer-caption">
+      <div class="screenshot-viewer-content">
+        <div class="screenshot-viewer-toolbar">
+          <h2 id="screenshot-viewer-title">Screenshot preview</h2>
+          <button class="screenshot-viewer-close" type="button" data-screenshot-close aria-label="Close screenshot preview">×</button>
+        </div>
+        <img class="screenshot-viewer-image" data-screenshot-image alt="">
+        <p id="screenshot-viewer-caption" data-screenshot-caption></p>
+        <a class="screenshot-viewer-original" data-screenshot-original target="_blank" rel="noopener noreferrer">Open original full-resolution image (new tab) ↗</a>
+      </div>
+    </dialog>
 
     <footer class="site-footer">
       <div class="shell footer-main">

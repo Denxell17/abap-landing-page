@@ -26,7 +26,7 @@
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' && !document.querySelector('[data-screenshot-viewer][open]')) {
         setMenuOpen(false);
         toggle?.focus();
       }
@@ -39,6 +39,66 @@
     document.querySelectorAll('[data-year]').forEach((node) => {
       node.textContent = String(new Date().getFullYear());
     });
+
+    const viewer = document.querySelector('[data-screenshot-viewer]');
+    if (viewer && typeof viewer.showModal === 'function') {
+      const image = viewer.querySelector('[data-screenshot-image]');
+      const caption = viewer.querySelector('[data-screenshot-caption]');
+      const original = viewer.querySelector('[data-screenshot-original]');
+      const close = viewer.querySelector('[data-screenshot-close]');
+      let trigger = null;
+      let backdropPressed = false;
+
+      document.querySelectorAll('.hero-product a, .gallery-image').forEach((link) => {
+        const thumbnail = link.querySelector('img');
+        if (!thumbnail) return;
+        link.setAttribute('aria-haspopup', 'dialog');
+        link.addEventListener('click', (event) => {
+          // Preserve modified clicks and the original link as a no-JavaScript fallback.
+          if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          trigger = link;
+          image.src = link.href;
+          image.alt = thumbnail.alt;
+          const figureCaption = link.closest('figure')?.querySelector('figcaption');
+          caption.textContent = figureCaption
+            ? Array.from(figureCaption.childNodes, (node) => node.textContent.trim()).filter(Boolean).join(' ')
+            : thumbnail.alt;
+          original.href = link.href;
+          viewer.showModal();
+          document.body.classList.add('screenshot-viewer-open');
+          close.focus();
+        });
+      });
+
+      viewer.addEventListener('keydown', (event) => {
+        if (event.key !== 'Tab') return;
+        if (event.shiftKey && document.activeElement === close) {
+          event.preventDefault();
+          original.focus();
+        } else if (!event.shiftKey && document.activeElement === original) {
+          event.preventDefault();
+          close.focus();
+        }
+      });
+      close.addEventListener('click', () => viewer.close());
+      viewer.addEventListener('cancel', (event) => {
+        event.preventDefault();
+        viewer.close();
+      });
+      // Only close when both ends of the gesture are on the backdrop.
+      viewer.addEventListener('pointerdown', (event) => {
+        backdropPressed = event.target === viewer;
+      });
+      viewer.addEventListener('click', (event) => {
+        if (backdropPressed && event.target === viewer) viewer.close();
+        backdropPressed = false;
+      });
+      viewer.addEventListener('close', () => {
+        document.body.classList.remove('screenshot-viewer-open');
+        trigger?.focus({ preventScroll: true });
+      });
+    }
 
     const reveals = document.querySelectorAll('.reveal');
     if (reducedMotion.matches || !('IntersectionObserver' in window)) {

@@ -361,3 +361,15 @@ h3 { margin-bottom: 12px; font-size: 1.18rem; letter-spacing: -.02em; }
   .primary-nav a { padding: 13px 10px !important; border-bottom: 1px solid var(--line); }
   .primary-nav .nav-cta { margin-top: 11px; text-align: center; border: 1px solid var(--line-strong); }
 }
+
+/* Native modal keeps keyboard focus inside the screenshot preview. */
+body.screenshot-viewer-open { overflow: hidden; }
+.screenshot-viewer { width: fit-content; max-width: calc(100vw - 24px); max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); padding: 0; border: 1px solid var(--line-strong); border-radius: var(--radius); color: var(--ink); background: var(--surface); box-shadow: var(--shadow); }
+.screenshot-viewer::backdrop { background: rgba(6, 13, 20, .86); }
+.screenshot-viewer-content { display: flex; flex-direction: column; align-items: center; gap: 12px; min-width: 0; padding: 16px; }
+.screenshot-viewer-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; }
+.screenshot-viewer-toolbar h2 { margin: 0; font-size: 1rem; }
+.screenshot-viewer-close { flex: none; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line-strong); border-radius: 6px; color: var(--ink); background: var(--surface-2); font-size: 2rem; line-height: 1; cursor: pointer; }
+.screenshot-viewer-image { display: block; flex: none; width: auto; height: auto; max-width: min(1200px, calc(100vw - 58px)); max-height: calc(100vh - 250px); max-height: calc(100dvh - 250px); object-fit: contain; }
+.screenshot-viewer [data-screenshot-caption] { width: 100%; max-width: 1000px; margin: 0; color: var(--muted); font-size: .8rem; overflow-wrap: anywhere; }
+.screenshot-viewer-original { align-self: flex-start; color: var(--blue-bright); font-size: .8rem; text-decoration: underline; overflow-wrap: anywhere; }
